@@ -1,0 +1,126 @@
+<!-- place your HTML code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Short History of the Cocktail</title>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #14110e;
+      --paper: #1d1813;
+      --ink: #ece3d4;
+      --muted: #a89a83;
+      --accent: #c8862b;
+      --line: #3a2f24;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+    header { text-align: center; border-bottom: 1px solid var(--line); padding-bottom: 28px; margin-bottom: 40px; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px; font-weight: 500; margin: 0 0 8px;
+      letter-spacing: .5px;
+    }
+    .subtitle { color: var(--muted); font-style: italic; font-size: 22px; }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500; font-size: 30px; margin-top: 48px;
+      border-left: 3px solid var(--accent); padding-left: 14px;
+    }
+    p { margin: 16px 0; }
+
+    .cocktail-list { list-style: none; padding: 0; }
+    .cocktail-name {
+      display: inline-block; cursor: pointer;
+      font-family: 'Playfair Display', serif; font-size: 24px;
+      color: var(--accent); border-bottom: 1px dashed var(--accent);
+      margin: 6px 18px 6px 0; transition: color .2s;
+    }
+    .cocktail-name:hover { color: #f0b75a; }
+    #cocktail-desc {
+      min-height: 64px; margin-top: 14px; padding: 18px 22px;
+      background: var(--paper); border: 1px solid var(--line);
+      border-radius: 4px; color: var(--ink); font-style: italic;
+    }
+
+    .swap-box { text-align: center; margin: 24px 0; }
+    #swap-img {
+      width: 280px; height: 280px; border: 1px solid var(--line);
+      border-radius: 6px; cursor: pointer; transition: transform .2s;
+    }
+    #swap-img:hover { transform: scale(1.03); }
+    .caption { color: var(--muted); font-size: 16px; font-style: italic; }
+
+    .anim-stage {
+      position: relative; height: 90px; margin: 20px 0;
+      border-top: 1px dotted var(--line); border-bottom: 1px dotted var(--line);
+    }
+    #garnish {
+      position: relative;
+      left: 0; top: 24px; font-size: 40px; display: inline-block;
+    }
+    button {
+      font-family: 'Cormorant Garamond', serif; font-size: 18px;
+      background: var(--accent); color: #14110e; border: none;
+      padding: 8px 20px; border-radius: 3px; cursor: pointer;
+      letter-spacing: .5px;
+    }
+    button:hover { background: #f0b75a; }
+    footer { margin-top: 64px; color: var(--muted); font-size: 15px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>A Short History of the Cocktail</h1>
+      <div class="subtitle">From the apothecary counter to the speakeasy</div>
+    </header>
+
+    <p>The word "cocktail" first appeared in print in 1806, defined as a mix of spirits, sugar,
+       water, and bitters &mdash; essentially what we now call an Old Fashioned. Over two centuries
+       it traveled from the pharmacy counter, through the back rooms of Prohibition, to today's
+       craft bars. The three drinks below are practically that history in miniature.</p>
+
+    <h2>Hover over a drink name</h2>
+    <ul class="cocktail-list">
+      <li>
+        <span class="cocktail-name" data-desc="The 'original' cocktail of the 1880s: bourbon or rye, a sugar cube, bitters, and an orange twist. The ancestor of them all.">Old Fashioned</span>
+        <span class="cocktail-name" data-desc="Born at the Manhattan Club in New York: whiskey, sweet vermouth, and bitters. Legend ties it to a banquet thrown by Winston Churchill's mother.">Manhattan</span>
+        <span class="cocktail-name" data-desc="In 1919 Count Camillo Negroni swapped the soda in an Americano for gin: equal parts gin, Campari, and vermouth.">Negroni</span>
+      </li>
+    </ul>
+    <div id="cocktail-desc">Hover over any drink name above to read its story.</div>
+
+    <h2>Hover over the glass</h2>
+    <div class="swap-box">
+      <img id="swap-img" src="images/cocktail-a.svg" data-hover="images/cocktail-b.svg" alt="A cocktail glass">
+      <div class="caption">Hover to swap &mdash; Manhattan &#8644; Negroni</div>
+    </div>
+
+    <h2>Click to send the garnish sliding</h2>
+    <div class="anim-stage">
+      <span id="garnish">&#127864;</span>
+    </div>
+    <button id="shake-btn">Shake it</button>
+
+    <footer>Topic of Interest &middot; jQuery Assignment</footer>
+  </div>
+</body>
+</html>

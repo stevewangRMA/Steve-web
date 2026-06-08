@@ -11,9 +11,6 @@
 
   <link rel="stylesheet" href="css/main.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --bg: #14110e;
@@ -27,29 +24,20 @@
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
       line-height: 1.6;
     }
     .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
     header { text-align: center; border-bottom: 1px solid var(--line); padding-bottom: 28px; margin-bottom: 40px; }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 52px; font-weight: 500; margin: 0 0 8px;
-      letter-spacing: .5px;
-    }
-    .subtitle { color: var(--muted); font-style: italic; font-size: 22px; }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 500; font-size: 30px; margin-top: 48px;
-      border-left: 3px solid var(--accent); padding-left: 14px;
-    }
+    h1 { font-size: 42px; font-weight: 700; margin: 0; }
+    h2 { font-size: 26px; font-weight: 700; margin-top: 48px; }
     p { margin: 16px 0; }
 
     .cocktail-list { list-style: none; padding: 0; }
     .cocktail-name {
       display: inline-block; cursor: pointer;
-      font-family: 'Playfair Display', serif; font-size: 24px;
+      font-size: 20px;
       color: var(--accent); border-bottom: 1px dashed var(--accent);
       margin: 6px 18px 6px 0; transition: color .2s;
     }
@@ -57,7 +45,7 @@
     #cocktail-desc {
       min-height: 64px; margin-top: 14px; padding: 18px 22px;
       background: var(--paper); border: 1px solid var(--line);
-      border-radius: 4px; color: var(--ink); font-style: italic;
+      border-radius: 4px; color: var(--ink);
     }
 
     .swap-box { text-align: center; margin: 24px 0; }
@@ -66,7 +54,6 @@
       border-radius: 6px; cursor: pointer; transition: transform .2s;
     }
     #swap-img:hover { transform: scale(1.03); }
-    .caption { color: var(--muted); font-size: 16px; font-style: italic; }
 
     .anim-stage {
       position: relative; height: 90px; margin: 20px 0;
@@ -77,20 +64,17 @@
       left: 0; top: 24px; font-size: 40px; display: inline-block;
     }
     button {
-      font-family: 'Cormorant Garamond', serif; font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif; font-size: 16px;
       background: var(--accent); color: #14110e; border: none;
       padding: 8px 20px; border-radius: 3px; cursor: pointer;
-      letter-spacing: .5px;
     }
     button:hover { background: #f0b75a; }
-    footer { margin-top: 64px; color: var(--muted); font-size: 15px; text-align: center; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <h1>A Short History of the Cocktail</h1>
-      <div class="subtitle">From the apothecary counter to the speakeasy</div>
     </header>
 
     <p>The word "cocktail" first appeared in print in 1806, defined as a mix of spirits, sugar,
@@ -111,7 +95,6 @@
     <h2>Hover over the glass</h2>
     <div class="swap-box">
       <img id="swap-img" src="images/cocktail-a.svg" data-hover="images/cocktail-b.svg" alt="A cocktail glass">
-      <div class="caption">Hover to swap &mdash; Manhattan &#8644; Negroni</div>
     </div>
 
     <h2>Click to send the garnish sliding</h2>
@@ -119,8 +102,6 @@
       <span id="garnish">&#127864;</span>
     </div>
     <button id="shake-btn">Shake it</button>
-
-    <footer>Topic of Interest &middot; jQuery Assignment</footer>
   </div>
 </body>
 </html>

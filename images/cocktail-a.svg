@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
-  <rect width="300" height="300" fill="#1d1813"/>
-  <polygon points="92,82 208,82 150,148" fill="#c8862b"/>
-  <polygon points="72,72 228,72 150,158" fill="none" stroke="#ece3d4" stroke-width="4"/>
-  <line x1="150" y1="158" x2="150" y2="232" stroke="#ece3d4" stroke-width="4"/>
-  <line x1="112" y1="240" x2="188" y2="240" stroke="#ece3d4" stroke-width="4"/>
-  <circle cx="178" cy="96" r="8" fill="#7a1f1f"/>
-    <text x="150" y="284" fill="#ece3d4" font-family="Didot, 'Bodoni MT', 'Playfair Display', Georgia, serif" font-size="17" font-weight="600" letter-spacing="5" text-anchor="middle">MANHATTAN</text>
-</svg>
